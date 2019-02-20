@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\androidproject\\superRecyleview\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "E:\\androidproject\\superRecyleview\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\androidproject\\superRecyleview\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_layout.xml",
+        "source": "E:\\androidproject\\superRecyleview\\app\\src\\main\\res\\layout\\item_layout.xml"
+    }
+]

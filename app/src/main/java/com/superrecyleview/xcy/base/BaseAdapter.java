@@ -1,6 +1,5 @@
 package com.superrecyleview.xcy.base;
 
-import android.databinding.ViewDataBinding;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -30,18 +29,23 @@ public abstract class BaseAdapter<T> extends RecyclerView.Adapter<MyViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder viewHolder, int position) {
-        bindHolder(viewHolder, position);
+        bindHolder(viewHolder, data.get(position), position);
     }
 
-    public abstract void bindHolder(MyViewHolder viewHolder, int position);
+    public abstract void bindHolder(MyViewHolder viewHolder, T item, int position);
 
     @Override
     public int getItemCount() {
         return data.size();
     }
 
-    public void addData(List<T> list) {
-        this.data = data;
+    public void updateData(List<T> lists) {
+        data = lists;
         notifyDataSetChanged();
+    }
+    public void deleteData(int position){
+        data.remove(position);
+        //the second params is itemCount.
+        notifyItemRangeChanged(position,data.size()-position+1);
     }
 }
